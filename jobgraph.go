@@ -1,4 +1,4 @@
-package pregel
+package frego
 
 import "time"
 
