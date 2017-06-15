@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package protos;
+
+message CassandraStoreParams {
+
+  repeated string hosts = 1;
+  string keyspace = 2;
+  int32 replicationFactor = 3;
+  string verticesTable = 4;
+  string edgesTable = 5;
+  BatchOptions batchOptions = 6;
+  int32 timeoutSec = 7;
+
+
+
+  message BatchOptions {
+
+      int32 MaxSize = 1;
+      int32 MaxBytes = 2;
+
+  }
+}
+
+message CassandraTokenRange {
+
+  string partitioner = 1;
+  string StartToken = 2;
+  string endToken =3;
+
+
+}
