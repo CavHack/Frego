@@ -1,0 +1,10 @@
+--
+
+- name: stop mesos slave
+  service: name=mesos-slave.service   state=stopped
+- name: disable mesos slave
+  service:  name=mesos-slave.service enabled=no
+- name: restart mesos master
+  service: name=mesos-master state=restarted
+- name: restart marathon
+  service: name=marathon  state=restarted

@@ -1,0 +1,9 @@
+--
+
+  user:   model
+  shell_rc_file: /home/mendel/.zshrc
+  spark_version: 1.6.1
+  spark_name: spark-{{spark_version}}-bin-hadoop2.6
+  spark_package: "{{ spark_name }}.tgz"
+  spark_mirror: http://apache.cs.uu.nl
+  spark_checksum_uri: http://www.apache.org/dist/spark/spark-{{ spark_version}}/{{ spark_package}}.md5
