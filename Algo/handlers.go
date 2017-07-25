@@ -35,8 +35,9 @@ func onMissingVertex(id string) (initialValue interface{}, err error) {
 	return value1, nil
 }
 
-func onDuplicateEdge() {
-
+func onDuplicateEdge(from string, to string, value1 interface{}, value2 interface{})(interface{}, error) {
+	glog.Infof("running default onDuplicateEdge handler; edge from %s to %s", from, to)
+	return value1, nil
 }
 
 func onMissingEdge(from string, to string) (initialValue interface{}, err error) {
